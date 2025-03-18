@@ -1,0 +1,23 @@
+class EsportsEvent:
+    def __init__(self, event_date):
+        self.event_date = event_date
+
+    def scheduleMatch(self):
+        return f"Match scheduled on {self.event_date}."
+
+class StudentDivision(EsportsEvent):
+    def registerTeam(self, team_name):
+        return f"Team '{team_name}' registered for the Student Division event on {self.event_date}."
+
+class FacultyDivision(EsportsEvent):
+    def assignReferee(self, referee_name):
+        return f"Referee '{referee_name}' assigned for the Faculty Division event on {self.event_date}."
+
+event_date = "2023-11-15"
+student_event = StudentDivision(event_date)
+faculty_event = FacultyDivision(event_date)
+
+print(student_event.scheduleMatch())
+print(student_event.registerTeam("Team Alpha"))
+print(faculty_event.scheduleMatch())
+print(faculty_event.assignReferee("Referee Josepha"))
