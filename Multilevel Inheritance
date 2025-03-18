@@ -1,0 +1,25 @@
+class Educator:
+    def prepareLesson(self):
+        return "Preparing a general lesson."
+
+class ITInstructor(Educator):
+    def prepareLesson(self):
+        return "Preparing a technical lesson focused on coding."
+
+    def teachCoding(self):
+        return "Teaching coding concepts."
+
+class DatabaseInstructor(ITInstructor):
+    def prepareLesson(self):
+        return "Preparing a lesson focused on Java and Python integration."
+
+    def teachCoding(self):
+        return "Teaching coding concepts with a focus on Java and Python."
+
+    def demonstrateMySQL(self):
+        return "Demonstrating JavPyth database operations."
+
+db_instructor = DatabaseInstructor()
+print(db_instructor.prepareLesson())
+print(db_instructor.teachCoding())
+print(db_instructor.demonstrateMySQL()) 
